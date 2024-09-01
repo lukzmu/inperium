@@ -1,0 +1,17 @@
+x-base: &base
+  image: inperium
+  env_file: .env
+  volumes:
+    - .:/app
+  labels:
+    eu.inperium: inperium
+
+services:
+  web:
+    <<: *base
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    command: runserver
+    ports:
+      - "8000:8000"

@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "inperium"
+version = "1.0.0"
+description = "The INPERIUM company website."
+authors = ["Lukasz Zmudzinski <lukasz@zmudzinski.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pelican = "^4.9.1"
+pyyaml = "^6.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.3"
+mypy = "^1.11.2"
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "C",  # flake8-comprehensions
+    "I",  # isort errors
+    "B",  # flake8-bugbear
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "yaml"
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "src/core/settings.py",
+    "src/tasks.py",
+    "*/dto.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.coverage.html]
+directory = ".pytest_coverage"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
