@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ SITENAME }}</title>
+    <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="{{ SITEURL }}" />
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:description" content="INPERIUM - Python Solutions" />
+    <meta property="og:image" content="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/twitter_card.png" />
+</head>
+
+<body class="bg-gray-900 ">
+    <main role="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>

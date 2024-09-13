@@ -26,4 +26,76 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # --- Site Data ---
-SITE_DATA = {}
+SITE_DATA = {
+    "contact": {
+        "email": "hello@inperium.eu",
+    },
+    "projects": [
+        {
+            "name": "IoT Emergency Lightning System",
+            "icon": "iot_lightning.png",
+        },
+        {
+            "name": "Medical Knowledge Base",
+            "icon": "medical_knowledge_base.png",
+        },
+        {
+            "name": "Airport A-SMGCS System",
+            "icon": "asmgcs.png",
+        },
+        {
+            "name": "Analytics Dashboard for ML",
+            "icon": "dashboard_ml.png",
+        },
+        {
+            "name": "Online RPG UI Enhancement",
+            "icon": "rpg.png",
+        },
+        {
+            "name": "Smart Car Fleet Manager",
+            "icon": "car_fleet.png",
+        },
+        {
+            "name": "SNOMED Code Library",
+            "icon": "snomed.png",
+        },
+        {
+            "name": "AR Furniture Builder",
+            "icon": "ar_furniture.png",
+        },
+        {
+            "name": "Fintech Travel Portal",
+            "icon": "travel.png",
+        },
+        {
+            "name": "IoT City Heating Platform",
+            "icon": "heating.png",
+        },
+        {
+            "name": "Robotics Path Planning",
+            "icon": "path_planning.png",
+        },
+    ],
+    "companies": [
+        {
+            "name": "Infermedica",
+            "icon": "infermedica.svg",
+        },
+        {
+            "name": "Merixstudio",
+            "icon": "merixstudio.svg",
+        },
+        {
+            "name": "Microsoft",
+            "icon": "microsoft.svg",
+        },
+        {
+            "name": "AP-Tech",
+            "icon": "aptech.svg",
+        },
+        {
+            "name": "Treesat",
+            "icon": "treesat.svg",
+        },
+    ],
+}
