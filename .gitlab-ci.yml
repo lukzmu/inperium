@@ -9,13 +9,9 @@ before_script:
   - poetry install
   - export PYTHONPATH="$PYTHONPATH:./src"
 
-🖤 black:
-  stage: lint
-  script: poetry run black --check --diff src/
-
 🐶 ruff:
   stage: lint
-  script: poetry run ruff src/
+  script: poetry run ruff check src/
 
 🍰 mypy:
   stage: lint
@@ -26,7 +22,6 @@ pages:
   only: 
     - main
   needs:
-    - 🖤 black
     - 🐶 ruff
     - 🍰 mypy
   script: 

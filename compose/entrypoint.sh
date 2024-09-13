@@ -8,7 +8,7 @@ if [ "$1" = 'runserver' ]; then
 elif [ "$1" = 'lint' ]; then
     shift
     OPTS=${@:-'.'}
-    echo "-- ruff --" && ruff $OPTS || EXIT=$?
+    echo "-- ruff --" && ruff check $OPTS || EXIT=$?
     MYPY_OPTS=${@:-'src/'}
     echo "-- mypy --" && mypy $MYPY_OPTS || EXIT=$?
     exit ${EXIT:-0}
