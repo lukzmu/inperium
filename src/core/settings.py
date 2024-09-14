@@ -29,6 +29,8 @@ AUTHOR_FEED_RSS = None
 SITE_DATA = {
     "contact": {
         "email": "hello@inperium.eu",
+        "vat": "PL7393659738",
+        "regon": "380660414",
     },
     "projects": [
         {
