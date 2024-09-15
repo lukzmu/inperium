@@ -32,6 +32,14 @@ SITE_DATA = {
         "vat": "PL7393659738",
         "regon": "380660414",
     },
+    "services": [
+        "Software solutions tailored to your business",
+        "Data-driven insights and product analytics",
+        "Fast, reliable development delivering quality results",
+        "Scalable code that grows with your clientbase",
+        "Security that safeguards your data and operations",
+        "Continuous support to keep your systems running smoothly",
+    ],
     "projects": [
         {
             "name": "IoT Emergency Lightning System",
