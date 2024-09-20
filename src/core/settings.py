@@ -1,5 +1,7 @@
 import os
 
+from core.repository import contact_repository
+
 # --- Site Data ---
 SITEURL = os.getenv("SITEURL", default="https://inperium.eu")
 AUTHOR = "Lukasz Zmudzinski"
@@ -27,11 +29,7 @@ AUTHOR_FEED_RSS = None
 
 # --- Site Data ---
 SITE_DATA = {
-    "contact": {
-        "email": "hello@inperium.eu",
-        "vat": "PL7393659738",
-        "regon": "380660414",
-    },
+    "contact": contact_repository.get_contact(),
     "services": [
         "Software solutions tailored to your business",
         "Data-driven insights and product analytics",
