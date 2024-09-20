@@ -1,6 +1,7 @@
 import os
 
 from core.repository import contact_repository
+from project.repository import project_repository
 
 # --- Site Data ---
 SITEURL = os.getenv("SITEURL", default="https://inperium.eu")
@@ -38,52 +39,7 @@ SITE_DATA = {
         "Security that safeguards your data and operations",
         "Continuous support to keep your systems running smoothly",
     ],
-    "projects": [
-        {
-            "name": "IoT Emergency Lightning System",
-            "icon": "iot_lightning.png",
-        },
-        {
-            "name": "Medical Knowledge Base",
-            "icon": "medical_knowledge_base.png",
-        },
-        {
-            "name": "Airport A-SMGCS System",
-            "icon": "asmgcs.png",
-        },
-        {
-            "name": "Analytics Dashboard for ML",
-            "icon": "dashboard_ml.png",
-        },
-        {
-            "name": "Online RPG UI Enhancement",
-            "icon": "rpg.png",
-        },
-        {
-            "name": "Smart Car Fleet Manager",
-            "icon": "car_fleet.png",
-        },
-        {
-            "name": "SNOMED Code Library",
-            "icon": "snomed.png",
-        },
-        {
-            "name": "AR Furniture Builder",
-            "icon": "ar_furniture.png",
-        },
-        {
-            "name": "Fintech Travel Portal",
-            "icon": "travel.png",
-        },
-        {
-            "name": "IoT City Heating Platform",
-            "icon": "heating.png",
-        },
-        {
-            "name": "Robotics Path Planning",
-            "icon": "path_planning.png",
-        },
-    ],
+    "projects": project_repository.get_projects(),
     "companies": [
         {
             "name": "Infermedica",
