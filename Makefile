@@ -10,7 +10,7 @@ test:
 lint:
 	@docker compose run web lint
 
-fmt:
+lint-autofix:
 	@docker compose run web fmt
 
 clean:
