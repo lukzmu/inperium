@@ -20,7 +20,7 @@ This is the repository that holds the INPERIUM company website written in Python
 | :--- | :--- |
 | Build the project | `make build` |
 | Run the project | `make run` |
-| Format project | `make fmt` |
+| Format project | `make lint-autofix` |
 | Lint project | `make lint` |
 | Test project | `make test` |
 | Clean docker project files | `make clean` |
