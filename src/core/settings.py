@@ -3,6 +3,7 @@ import os
 from company.repository import company_repository
 from core.repository import contact_repository
 from project.repository import project_repository
+from service.repository import service_repository
 
 # --- Site Data ---
 SITEURL = os.getenv("SITEURL", default="https://inperium.eu")
@@ -32,14 +33,7 @@ AUTHOR_FEED_RSS = None
 # --- Site Data ---
 SITE_DATA = {
     "contact": contact_repository.get_contact(),
-    "services": [
-        "Software solutions tailored to your business",
-        "Data-driven insights and product analytics",
-        "Fast, reliable development delivering quality results",
-        "Scalable code that grows with your clientbase",
-        "Security that safeguards your data and operations",
-        "Continuous support to keep your systems running smoothly",
-    ],
+    "services": service_repository.get_services(),
     "projects": project_repository.get_projects(),
     "companies": company_repository.get_companies(),
 }
