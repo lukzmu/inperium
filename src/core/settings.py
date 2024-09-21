@@ -1,5 +1,6 @@
 import os
 
+from company.repository import company_repository
 from core.repository import contact_repository
 from project.repository import project_repository
 
@@ -40,26 +41,5 @@ SITE_DATA = {
         "Continuous support to keep your systems running smoothly",
     ],
     "projects": project_repository.get_projects(),
-    "companies": [
-        {
-            "name": "Infermedica",
-            "icon": "infermedica.svg",
-        },
-        {
-            "name": "Merixstudio",
-            "icon": "merixstudio.svg",
-        },
-        {
-            "name": "Microsoft",
-            "icon": "microsoft.svg",
-        },
-        {
-            "name": "AP-Tech",
-            "icon": "aptech.svg",
-        },
-        {
-            "name": "Treesat",
-            "icon": "treesat.svg",
-        },
-    ],
+    "companies": company_repository.get_companies(),
 }
