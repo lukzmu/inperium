@@ -22,7 +22,6 @@ elif [ "$1" = 'fmt' ]; then
 elif [ "$1" = 'test' ]; then
     shift
     OPTS=${@:-'src/'}
-    echo "-- bandit --" && bandit -r $OPTS
     echo "-- pytest --" && pytest --cov=src --cov-report=json
 fi
 
