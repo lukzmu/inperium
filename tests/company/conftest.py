@@ -7,7 +7,7 @@ from company.repository import CompanyRepository
 def company_repository():
     def _company_repository(data_path="dummy_path"):
         return CompanyRepository(data_path=data_path)
-    
+
     return _company_repository
 
 
