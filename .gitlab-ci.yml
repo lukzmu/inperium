@@ -17,13 +17,22 @@ before_script:
   stage: lint
   script: poetry run mypy src/
 
+🧪 pytest:
+  stage: test
+  needs:
+    - 🖤 black
+    - 🐶 ruff
+    - 🍰 mypy
+  script:
+    - poetry run pytest --cov=src --cov-report=json
+    - bash <(curl -s https://codecov.io/bash)
+
 pages:
   stage: publish
   only: 
     - main
   needs:
-    - 🐶 ruff
-    - 🍰 mypy
+    - 🧪 pytest
   script: 
     - cd src
     - poetry run pelican content -s core/settings.py -o ../public
