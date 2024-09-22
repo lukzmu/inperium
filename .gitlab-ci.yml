@@ -24,6 +24,7 @@ before_script:
     - 🐶 ruff
     - 🍰 mypy
   script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
     - poetry run pytest --cov=src --cov-report=json
     - bash <(curl -s https://codecov.io/bash)
 
