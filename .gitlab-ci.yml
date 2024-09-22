@@ -2,6 +2,7 @@ image: python:3.12-slim
 
 stages:
   - lint
+  - test
   - publish
 
 before_script:
