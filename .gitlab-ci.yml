@@ -24,7 +24,7 @@ before_script:
     - 🐶 ruff
     - 🍰 mypy
   script:
-    - apt-get update && apt-get install curl
+    - apt-get update -y && apt-get install -y curl
     - poetry run pytest --cov=src --cov-report=json
     - bash <(curl -s https://codecov.io/bash)
 
