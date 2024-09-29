@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gl/lukzmu/inperium/graph/badge.svg?token=PLQ9Q06Y8E)](https://codecov.io/gl/lukzmu/inperium)
+
 # INPERIUM Company Website
 
 This is the repository that holds the INPERIUM company website written in Python. It uses the `pelican` package and the deployment is done through GitLab Pipelines, hosted on GitLab Pages. 
