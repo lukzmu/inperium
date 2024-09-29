@@ -14,4 +14,4 @@ class TestCompanyRepository:
 
         result = company_repository().get_companies()
 
-        assert len(result) == 2
+        assert len(result) == len(company_data["items"])
