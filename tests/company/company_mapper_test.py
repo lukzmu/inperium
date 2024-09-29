@@ -8,6 +8,6 @@ class TestCompanyMapper:
 
         result = CompanyMapper.dict_to_dto(company=selected_company)
 
-        assert type(result) == Company
+        assert type(result) is Company
         assert result.name == selected_company["name"]
         assert result.icon == selected_company["icon"]
