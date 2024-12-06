@@ -2,7 +2,7 @@
 
 # INPERIUM Company Website
 
-This is the repository that holds the INPERIUM company website written in Python. It uses the `pelican` package and the deployment is done through GitLab Pipelines, hosted on GitLab Pages. 
+This is the repository that holds the INPERIUM company website written in Python. It uses the `pelican` package and the deployment is done through GitHub Actions, hosted on GitHub Pages. 
 
 ## Requirements
 
